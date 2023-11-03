@@ -4,7 +4,7 @@
 // continuous memory location
 // since the address we can't know accessing elements by address is not possible.
 
-package Arrays;
+package Arrays.Easy;
 
 import java.util.*;
 
