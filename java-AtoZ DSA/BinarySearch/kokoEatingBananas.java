@@ -1,4 +1,3 @@
-package BinarySearch;
 
 public class kokoEatingBananas {
     public static int findMax(int v[]) {
