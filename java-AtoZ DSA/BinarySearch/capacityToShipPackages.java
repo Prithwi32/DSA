@@ -1,3 +1,5 @@
+package BinarySearch;
+
 public class capacityToShipPackages {
         public static int findDays(int[] weights, int cap) {
         int days = 1; //First day.
