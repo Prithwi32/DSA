@@ -1,4 +1,3 @@
-package BinarySearch.with2DArray;
 
 import java.util.ArrayList;
 import java.util.Arrays;
