@@ -1,6 +1,7 @@
 package LinkedList.SinglyLL;
 
-class Node {
+public class deleteInsert {
+    public static class Node {
     int data;
     Node next;
 
@@ -14,8 +15,6 @@ class Node {
         this.next = next2;
     }
 }
-
-public class deleteInsert {
     private static Node convertToLL(int arr[]) {
         Node head = new Node(arr[0]);
         Node mover = head;
@@ -37,47 +36,47 @@ public class deleteInsert {
     }
 
     // delete head
-    private static Node removeHead(Node head) {
-        if (head == null)
-            return head;
-        head = head.next;
-        return head;
-    }
+    // private static Node removeHead(Node head) {
+    //     if (head == null)
+    //         return head;
+    //     head = head.next;
+    //     return head;
+    // }
 
     // delete tail
-    private static Node removeTail(Node head) {
-        if (head == null || head.next == null)
-            return null;
-        Node temp = head;
-        while (temp.next.next != null) {
-            temp = temp.next;
-        }
-        temp.next = null;
-        return head;
-    }
+    // private static Node removeTail(Node head) {
+    //     if (head == null || head.next == null)
+    //         return null;
+    //     Node temp = head;
+    //     while (temp.next.next != null) {
+    //         temp = temp.next;
+    //     }
+    //     temp.next = null;
+    //     return head;
+    // }
 
     // delete kth element in LL : TC = O(k)
-    private static Node removeK(Node head, int k) {
-        if (head == null)
-            return head;
-        if (k == 1) {
-            head = head.next;
-            return head;
-        }
-        int cnt = 0;
-        Node temp = head;
-        Node prev = null;
-        while (temp != null) {
-            cnt++;
-            if (cnt == k) {
-                prev.next = prev.next.next;
-                break;
-            }
-            prev = temp;
-            temp = temp.next;
-        }
-        return head;
-    }
+    // private static Node removeK(Node head, int k) {
+    //     if (head == null)
+    //         return head;
+    //     if (k == 1) {
+    //         head = head.next;
+    //         return head;
+    //     }
+    //     int cnt = 0;
+    //     Node temp = head;
+    //     Node prev = null;
+    //     while (temp != null) {
+    //         cnt++;
+    //         if (cnt == k) {
+    //             prev.next = prev.next.next;
+    //             break;
+    //         }
+    //         prev = temp;
+    //         temp = temp.next;
+    //     }
+    //     return head;
+    // }
 
     // delete given element in LL
     /**
@@ -94,73 +93,81 @@ public class deleteInsert {
     // node.next = node.next.next;
     // }
 
-    private static Node removeEle(Node head, int val) {
-        if (head == null)
-            return head;
-        if (head.data == val) {
-            head = head.next;
-            return head;
-        }
-        Node temp = head;
-        Node prev = null;
-        while (temp != null) {
-            if (temp.data == val) {
-                prev.next = prev.next.next;
-                break;
-            }
-            prev = temp;
-            temp = temp.next;
-        }
-        return head;
-    }
+    // private static Node removeEle(Node head, int val) {
+    //     if (head == null)
+    //         return head;
+    //     if (head.data == val) {
+    //         head = head.next;
+    //         return head;
+    //     }
+    //     Node temp = head;
+    //     Node prev = null;
+    //     while (temp != null) {
+    //         if (temp.data == val) {
+    //             prev.next = prev.next.next;
+    //             break;
+    //         }
+    //         prev = temp;
+    //         temp = temp.next;
+    //     }
+    //     return head;
+    // }
 
     // inserting head
-    private static Node insertHead(Node head, int val) {
-        Node newNode = new Node(val);
-        newNode.next = head;
-        head = newNode;
-        return head;
-    }
+    // private static Node insertHead(Node head, int val) {
+    //     // if(head == null){
+    //     //     Node newNode = new Node(val);
+    //     //     return newNode;
+    //     // }else{
+    //     //     Node newNode = new Node(val, head);
+    //     //     head = head.next;
+    //     //     return newNode;
+    //     // }
+    //     Node newNode = new Node(val);
+    //     newNode.next = head;
+    //     head = newNode;
+    //     return head;
+    // }
 
     // inserting tail
-    private static Node insertTail(Node head, int val) {
-        if (head == null) {
-            return new Node(val);
-        }
-        Node temp = head;
-        while (temp.next != null) {
-            temp = temp.next;
-        }
-        Node newNode = new Node(val);
-        temp.next = newNode;
-        return head;
-    }
+    // private static Node insertTail(Node head, int val) {
+    //     if (head == null) {
+    //         return new Node(val);
+    //     }
+    //     Node temp = head;
+    //     while (temp.next != null) {
+    //         temp = temp.next;
+    //     }
+    //     Node newNode = new Node(val);
+    //     temp.next = newNode;
+    //     return head;
+    // }
 
     // given value insert it at position k
-    private static Node insertK(Node head, int val, int k) {
-        if (head == null) {
-            if (k == 1) {
-                return new Node(val, head);
-            } else {
-                return head;
-            }
-        }
-        if (k == 1) {
-            return new Node(val, head);
-        }
-        int cnt = 0;
-        Node temp = head;
-        while (temp.next != null) {
-            cnt++;
-            if (cnt == (k - 1)) {
-                Node x = new Node(val, temp.next);
-                temp.next = x;
-                break;
-            }
-            temp = temp.next;
-        }
-        return head;
-    }
+    // private static Node insertK(Node head, int val, int k) {
+    //     if (head == null) {
+    //         if (k == 1) {
+    //             return new Node(val, head);
+    //         } else {
+    //             return head;
+    //         }
+    //     }
+    //     if (k == 1) {
+    //         return new Node(val, head);
+    //     }
+    //     int cnt = 0;
+    //     Node temp = head;
+    //     while (temp.next != null) {
+    //         cnt++;
+    //         if (cnt == (k - 1)) {
+    //             Node x = new Node(val, temp.next);
+    //             temp.next = x;
+    //             break;
+    //         }
+    //         temp = temp.next;
+    //     }
+    //     return head;
+    // }
 
     // given value insert it before x
     private static Node insertBeforeX(Node head, int val, int x) {

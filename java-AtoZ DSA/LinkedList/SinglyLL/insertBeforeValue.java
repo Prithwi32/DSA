@@ -1,24 +1,23 @@
 package LinkedList.SinglyLL;
 
-import java.util.ArrayList;
-
-    class Node {
-    public int data;
-    public Node next;
-
-    // Constructors
-    public Node(int data, Node next) {
-        this.data = data;
-        this.next = next;
-    }
-
-    public Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
+import java.util.*;
 
 public class insertBeforeValue {
+    public static class Node {
+        int data;
+        Node next;
+
+        Node(int data1) {
+            this.data = data1;
+            this.next = null;
+        }
+
+        Node(int data2, Node next2) {
+            this.data = data2;
+            this.next = next2;
+        }
+    }
+
     // Function to print the linked list
     public static void printLL(Node head) {
         while (head != null) {
@@ -53,7 +52,13 @@ public class insertBeforeValue {
 
     public static void main(String[] args) {
         // Initialize list with values
-        ArrayList<Integer> arr = new ArrayList<Integer>() {{ add(0); add(1); add(2); }};
+        ArrayList<Integer> arr = new ArrayList<Integer>() {
+            {
+                add(0);
+                add(1);
+                add(2);
+            }
+        };
         int el = 5;
         int val = 2;
 
@@ -69,4 +74,3 @@ public class insertBeforeValue {
         printLL(head);
     }
 }
-
