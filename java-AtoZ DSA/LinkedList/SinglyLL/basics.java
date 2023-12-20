@@ -1,5 +1,6 @@
 package LinkedList.SinglyLL;
-class Node{
+public class basics {
+    public static class Node{
     int data;            // the data value
     Node next;           // the reference to the next Node in the linked list
 
@@ -13,8 +14,7 @@ class Node{
         this.data = data1;
         this.next = null;      // Initialize next with the provided reference
     }
-};
-public class basics {
+}
     public static void main(String[] args) {
         int arr[] = {1, 2, 5, 8, 4};
         // Creating a new Node with the value from the array
