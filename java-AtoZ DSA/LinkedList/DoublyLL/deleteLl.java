@@ -1,5 +1,6 @@
 package LinkedList.DoublyLL;
-class Node{
+public class deleteLl {
+    static class Node{
     int data;
     Node next;
     Node back;
@@ -14,7 +15,7 @@ class Node{
         this.back = prev1;
     }
 }
-public class deleteLl {
+
     // doublyLinkedList to array
     private static Node convertTo2Dll(int arr[]){
         Node head = new Node(arr[0]);
