@@ -1,8 +1,8 @@
 package LinkedList.SinglyLL;
 
-import Math.prime;
 
-class Node {
+public class countLengthOfLoop {
+    static class Node {
     int num;
     Node next;
 
@@ -11,7 +11,7 @@ class Node {
         next = null;
     }
 }
-public class countLengthOfLoop {
+
     static Node insertNode(Node head, int val) {
         Node newNode = new Node(val);
         if (head == null) {

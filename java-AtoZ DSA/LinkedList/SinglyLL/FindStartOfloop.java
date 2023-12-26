@@ -1,6 +1,7 @@
 package LinkedList.SinglyLL;
 
-class Node {
+class FindStartOfloop {
+    static class Node {
     int num;
     Node next;
 
@@ -10,7 +11,6 @@ class Node {
     }
 }
 
-class FindStartOfloop {
     static Node insertNode(Node head, int val) {
         Node newNode = new Node(val);
         if (head == null) {
